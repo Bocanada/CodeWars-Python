@@ -1,1 +1,2 @@
-Python 3's solutions for Codewars.
+## CodeWars / Python3
+<p>Problems solutions for CodeWars</p>
