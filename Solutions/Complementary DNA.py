@@ -1,4 +1,4 @@
-def DNA_strand(dna):
+def dna_strand(dna):
     # code here
     complements = {
         'A': 'T',
