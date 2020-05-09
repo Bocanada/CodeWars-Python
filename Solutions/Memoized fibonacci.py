@@ -1,18 +1,8 @@
-class Memoize:
-
-    def __init__(self, n):
-        self.n = n
-        self.memo = {}
-
-    def __call__(self, *args):
-        if args not in self.memo:
-            self.memo[args] = self.n(*args)
-            print(self.memo[args])
-        return self.memo[args]
-
-
-@Memoize
 def fibonacci(n):
-    if n in [0, 1]:
-        return n
-    return fibonacci(n - 1) + fibonacci(n - 2)
+    memo = {0: 0, 1: 1}
+
+    def fib(x):
+        if x not in memo:
+            memo[x] = fib(x - 1) + fib(x - 2)
+        return memo[x]
+    return fib(n)
